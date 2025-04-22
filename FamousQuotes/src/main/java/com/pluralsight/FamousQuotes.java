@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FamousQuotes {
     public static void main(String[] args) {
 
-       Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         String[] famousQuotes = {"The only limit to our realization of tomorrow is our doubts of today. – Franklin D. Roosevelt",
                 "In the middle of every difficulty lies opportunity. – Albert Einstein",
@@ -20,7 +20,16 @@ public class FamousQuotes {
 
         System.out.println("Enter a number between 1 - 10 for a surprise quote");
         int choice = scanner.nextInt();
+        try {
+            System.out.println("Your quote is: " + famousQuotes[choice - 1]);
+        } catch (Exception e) {
+            System.out.println("Your number is out of range!");
 
-        System.out.println("Your Quote is: " + famousQuotes[choice - 1]);
+        }
+
+
     }
-}
+
+
+    }
+
